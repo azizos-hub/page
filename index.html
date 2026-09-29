@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#05020a">
+
+<title>Azizos | My Socials</title>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    font-family:
+    Arial,
+    "Segoe UI",
+    sans-serif;
+
+    color:white;
+
+    background:
+    radial-gradient(
+        circle at 50% 20%,
+        #35103d 0%,
+        #16091d 30%,
+        #07040b 65%,
+        #020103 100%
+    );
+}
+
+
+/* =====================================================
+   SPACE BACKGROUND
+===================================================== */
+
+.space{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:0;
+
+    background:
+
+    radial-gradient(
+        circle at 10% 40%,
+        rgba(255,0,180,.18),
+        transparent 25%
+    ),
+
+    radial-gradient(
+        circle at 90% 65%,
+        rgba(100,50,255,.18),
+        transparent 25%
+    );
+}
+
+
+/* النجوم */
+
+.star{
+
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+    0 0 7px white;
+
+    opacity:.6;
+
+    animation:
+    twinkle 2s infinite alternate;
+}
+
+
+@keyframes twinkle{
+
+    from{
+        opacity:.15;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.4);
+    }
+}
+
+
+/* =====================================================
+   GLOW
+===================================================== */
+
+.glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:.25;
+}
+
+
+.glow1{
+
+    width:300px;
+    height:300px;
+
+    top:5%;
+    left:-120px;
+
+    background:#ff009d;
+}
+
+
+.glow2{
+
+    width:300px;
+    height:300px;
+
+    bottom:5%;
+    right:-120px;
+
+    background:#642cff;
+}
+
+
+.glow3{
+
+    width:220px;
+    height:220px;
+
+    top:45%;
+    left:40%;
+
+    background:#ff3bc1;
+
+    opacity:.08;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+#intro{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#020103;
+
+    transition:
+    opacity .8s ease,
+    visibility .8s ease;
+}
+
+
+#intro.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+}
+
+
+.introBox{
+
+    text-align:center;
+
+    animation:
+    introIn 1s ease;
+}
+
+
+.introLogo{
+
+    width:105px;
+    height:105px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    margin:auto;
+
+    border:
+    2px solid
+    rgba(255,255,255,.35);
+
+    box-shadow:
+
+    0 0 30px
+    rgba(255,40,190,.7),
+
+    0 0 90px
+    rgba(255,0,180,.25);
+}
+
+
+.introLogo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+.introName{
+
+    margin-top:20px;
+
+    font-size:16px;
+
+    letter-spacing:6px;
+
+    color:#fff;
+
+    text-shadow:
+    0 0 15px #ff4dc4;
+}
+
+
+.loading{
+
+    width:60px;
+
+    height:3px;
+
+    margin:20px auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:
+    rgba(255,255,255,.15);
+}
+
+
+.loading::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    background:#ff5bc8;
+
+    transform:
+    translateX(-100%);
+
+    animation:
+    loading 1.4s ease forwards;
+}
+
+
+@keyframes loading{
+
+    to{
+        transform:translateX(0);
+    }
+}
+
+
+@keyframes introIn{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+
+    position:relative;
+
+    z-index:5;
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:35px 15px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card{
+
+    width:100%;
+
+    max-width:825px;
+
+    padding:
+    42px 48px 30px;
+
+    border-radius:30px;
+
+    border:
+    1px solid
+    rgba(255,110,220,.25);
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(20,8,28,.84),
+        rgba(4,3,9,.88)
+    );
+
+    box-shadow:
+
+    0 0 80px
+    rgba(255,0,180,.08),
+
+    inset 0 0 50px
+    rgba(255,0,180,.025);
+
+    backdrop-filter:
+    blur(20px);
+
+    -webkit-backdrop-filter:
+    blur(20px);
+
+    animation:
+    cardIn 1s ease .25s both;
+}
+
+
+@keyframes cardIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(35px)
+        scale(.97);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+    }
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile{
+
+    text-align:center;
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.avatarArea{
+
+    position:relative;
+
+    width:170px;
+    height:170px;
+
+    margin:
+    0 auto 24px;
+}
+
+
+.avatar{
+
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#000;
+
+    border:
+    3px solid
+    rgba(255,100,220,.8);
+
+    box-shadow:
+
+    0 0 20px
+    rgba(255,70,200,.8),
+
+    0 0 55px
+    rgba(255,0,180,.35),
+
+    0 0 100px
+    rgba(100,40,255,.15);
+
+    z-index:2;
+}
+
+
+.avatar img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+
+/* حلقة مضيئة */
+
+.avatarRing{
+
+    position:absolute;
+
+    inset:-10px;
+
+    border-radius:50%;
+
+    border:
+    2px solid transparent;
+
+    border-top-color:#ff4dc4;
+
+    border-right-color:#8d4dff;
+
+    animation:
+    rotateRing 5s linear infinite;
+
+    filter:
+    drop-shadow(
+        0 0 8px
+        rgba(255,50,200,.8)
+    );
+}
+
+
+@keyframes rotateRing{
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.name{
+
+    font-size:48px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    direction:ltr;
+
+    color:#fff;
+
+    text-shadow:
+
+    0 0 12px
+    rgba(255,255,255,.3),
+
+    0 0 30px
+    rgba(255,50,190,.4);
+}
+
+
+.verified{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:27px;
+    height:27px;
+
+    margin-left:8px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff77ce,
+        #9b42ff
+    );
+
+    font-size:16px;
+
+    vertical-align:middle;
+
+    box-shadow:
+    0 0 15px
+    rgba(255,80,210,.7);
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider{
+
+    width:130px;
+
+    height:2px;
+
+    margin:
+    24px auto 17px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #ff55c7,
+        transparent
+    );
+
+    box-shadow:
+    0 0 12px
+    rgba(255,70,200,.5);
+}
+
+
+/* نجمة وسط الخط */
+
+.divider::after{
+
+    content:"✦";
+
+    position:relative;
+
+    display:block;
+
+    width:30px;
+
+    margin:-13px auto 0;
+
+    font-size:20px;
+
+    color:#ff66cb;
+
+    text-shadow:
+    0 0 12px #ff66cb;
+}
+
+
+/* =====================================================
+   BIO
+===================================================== */
+
+.bio{
+
+    margin-bottom:25px;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    color:
+    rgba(255,255,255,.9);
+}
+
+
+.bio .heart{
+
+    color:#ff3cae;
+
+    text-shadow:
+    0 0 12px #ff3cae;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.socials{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+}
+
+
+.social{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:84px;
+
+    display:flex;
+
+    align-items:center;
+
+    direction:ltr;
+
+    text-decoration:none;
+
+    color:white;
+
+    border-radius:21px;
+
+    padding:
+    12px 22px;
+
+    overflow:hidden;
+
+    border:
+    1px solid
+    rgba(255,150,230,.25);
+
+    background:
+
+    linear-gradient(
+        110deg,
+        rgba(255,255,255,.10),
+        rgba(255,255,255,.025)
+    );
+
+    box-shadow:
+
+    0 8px 25px
+    rgba(0,0,0,.35),
+
+    inset 0 1px 0
+    rgba(255,255,255,.08);
+
+    transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+}
+
+
+/* اللمعة */
+
+.social::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:70%;
+    height:100%;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.14),
+        transparent
+    );
+
+    transform:
+    skewX(-20deg);
+
+    transition:.7s ease;
+}
+
+
+.social:hover::before{
+
+    left:140%;
+}
+
+
+.social:hover{
+
+    transform:
+    translateY(-3px);
+
+    border-color:
+    rgba(255,110,220,.65);
+
+    box-shadow:
+
+    0 15px 35px
+    rgba(0,0,0,.45),
+
+    0 0 25px
+    rgba(255,50,190,.15);
+}
+
+
+.social:active{
+
+    transform:
+    scale(.98);
+}
+
+
+/* =====================================================
+   SOCIAL ICON
+===================================================== */
+
+.socialIcon{
+
+    width:55px;
+    height:55px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    box-shadow:
+    inset 0 0 20px
+    rgba(255,255,255,.04);
+}
+
+
+.socialIcon svg{
+
+    width:34px;
+    height:34px;
+
+    display:block;
+
+    filter:
+    drop-shadow(
+        0 0 7px
+        rgba(255,255,255,.25)
+    );
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.socialInfo{
+
+    flex:1;
+
+    padding-left:18px;
+
+    text-align:left;
+}
+
+
+.socialName{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    line-height:1.2;
+}
+
+
+.socialHandle{
+
+    margin-top:5px;
+
+    font-size:15px;
+
+    color:
+    rgba(255,255,255,.62);
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.arrow{
+
+    font-size:38px;
+
+    line-height:1;
+
+    color:#ff70ca;
+
+    opacity:.9;
+
+    transition:
+    transform .25s ease;
+}
+
+
+.social:hover .arrow{
+
+    transform:
+    translateX(5px);
+}
+
+
+/* =====================================================
+   SHARE
+===================================================== */
+
+.share{
+
+    width:100%;
+
+    height:68px;
+
+    margin-top:22px;
+
+    border-radius:20px;
+
+    border:
+    1px solid
+    rgba(255,90,200,.7);
+
+    background:
+
+    linear-gradient(
+        100deg,
+        rgba(255,35,160,.18),
+        rgba(130,50,255,.18)
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 0 20px
+    rgba(255,30,180,.08),
+
+    inset 0 0 25px
+    rgba(255,30,180,.04);
+
+    transition:.25s ease;
+}
+
+
+.share:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+
+    0 0 30px
+    rgba(255,40,190,.2);
+}
+
+
+.share:active{
+
+    transform:
+    scale(.97);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:28px;
+
+    color:
+    rgba(255,255,255,.55);
+
+    font-size:15px;
+
+    direction:ltr;
+}
+
+
+.footerLine{
+
+    width:110px;
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.2)
+    );
+}
+
+
+.footerLine.right{
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.2),
+        transparent
+    );
+}
+
+
+.footerHeart{
+
+    color:#ff4caf;
+
+    font-size:20px;
+
+    text-shadow:
+    0 0 10px #ff4caf;
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+#toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:
+    translate(-50%,30px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:10000;
+
+    padding:
+    13px 22px;
+
+    border-radius:30px;
+
+    background:
+    rgba(25,7,28,.95);
+
+    border:
+    1px solid
+    rgba(255,100,210,.4);
+
+    box-shadow:
+    0 0 25px
+    rgba(255,50,190,.2);
+
+    font-size:14px;
+
+    transition:.35s ease;
+}
+
+
+#toast.show{
+
+    opacity:1;
+
+    transform:
+    translate(-50%,0);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:650px){
+
+    main{
+
+        padding:
+        18px 10px;
+    }
+
+
+    .card{
+
+        padding:
+        30px 15px 23px;
+
+        border-radius:25px;
+    }
+
+
+    .avatarArea{
+
+        width:140px;
+        height:140px;
+
+        margin-bottom:20px;
+    }
+
+
+    .name{
+
+        font-size:36px;
+
+        letter-spacing:2px;
+    }
+
+
+    .verified{
+
+        width:22px;
+        height:22px;
+
+        font-size:13px;
+    }
+
+
+    .bio{
+
+        font-size:16px;
+
+        margin-bottom:21px;
+    }
+
+
+    .social{
+
+        min-height:72px;
+
+        padding:
+        10px 14px;
+
+        border-radius:18px;
+    }
+
+
+    .socialIcon{
+
+        width:48px;
+        height:48px;
+
+        border-radius:14px;
+    }
+
+
+    .socialIcon svg{
+
+        width:29px;
+        height:29px;
+    }
+
+
+    .socialInfo{
+
+        padding-left:13px;
+    }
+
+
+    .socialName{
+
+        font-size:18px;
+    }
+
+
+    .socialHandle{
+
+        font-size:13px;
+
+        margin-top:4px;
+    }
+
+
+    .arrow{
+
+        font-size:30px;
+    }
+
+
+    .share{
+
+        height:59px;
+
+        font-size:17px;
+    }
+
+
+    .footer{
+
+        font-size:12px;
+
+        gap:8px;
+    }
+
+
+    .footerLine{
+
+        width:55px;
+    }
+
+}
+
+
+@media(max-width:350px){
+
+    .name{
+
+        font-size:31px;
+    }
+
+
+    .socialName{
+
+        font-size:16px;
+    }
+
+
+    .socialHandle{
+
+        font-size:12px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SPACE
+===================================================== -->
+
+<div class="space">
+
+    <div class="glow glow1"></div>
+
+    <div class="glow glow2"></div>
+
+    <div class="glow glow3"></div>
+
+</div>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div id="intro">
+
+    <div class="introBox">
+
+        <div class="introLogo">
+
+            <img
+            src="profile.jpg"
+            alt="Azizos">
+
+        </div>
+
+        <div class="introName">
+            AZIZOS
+        </div>
+
+        <div class="loading"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<div class="card">
+
+
+<!-- PROFILE -->
+
+<div class="profile">
+
+
+<div class="avatarArea">
+
+    <div class="avatarRing"></div>
+
+    <div class="avatar">
+
+        <img
+        src="profile.jpg"
+        alt="Azizos">
+
+    </div>
+
+</div>
+
+
+<div class="name">
+
+    AZIZOS.002
+
+    <span class="verified">
+        ✓
+    </span>
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<div class="bio">
+
+    <span class="heart">♥</span>
+🫡 welcome 
+
+    <br>
+
+👇🏻tous mon compte 
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     SOCIALS
+===================================================== -->
+
+<div class="socials">
+
+
+<!-- INSTAGRAM -->
+
+<a
+class="social"
+href="https://www.instagram.com/azizos.002__/"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div class="socialIcon">
+
+<svg
+viewBox="0 0 24 24"
+fill="none">
+
+<rect
+x="3"
+y="3"
+width="18"
+height="18"
+rx="5"
+stroke="white"
+stroke-width="2"/>
+
+<circle
+cx="12"
+cy="12"
+r="4"
+stroke="white"
+stroke-width="2"/>
+
+<circle
+cx="17.5"
+cy="6.5"
+r="1"
+fill="white"/>
+
+</svg>
+
+</div>
+
+
+<div class="socialInfo">
+
+<div class="socialName">
+Instagram
+</div>
+
+<div class="socialHandle">
+
+</div>
+
+</div>
+
+
+<div class="arrow">
+›
+</div>
+
+
+</a>
+
+
+<!-- FACEBOOK -->
+
+<a
+class="social"
+href="https://www.facebook.com/share/196SPUTuPZ/"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div class="socialIcon">
+
+<svg
+viewBox="0 0 24 24">
+
+<path
+d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"
+fill="white"/>
+
+</svg>
+
+</div>
+
+
+<div class="socialInfo">
+
+<div class="socialName">
+Facebook
+</div>
+
+<div class="socialHandle">
+
+</div>
+
+</div>
+
+
+<div class="arrow">
+›
+</div>
+
+
+</a>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="social"
+href="https://wa.me/21620109183"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div class="socialIcon">
+
+<svg
+viewBox="0 0 24 24"
+fill="none">
+
+<path
+d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.3A10 10 0 1 0 12 2z"
+stroke="white"
+stroke-width="1.8"/>
+
+<path
+d="M8.5 7.8c.3-.4.6-.4.9-.1l1.1 1.6c.2.3.2.5 0 .8l-.5.6c.8 1.4 1.8 2.4 3.2 3.2l.6-.5c.3-.2.5-.2.8 0l1.6 1.1c.3.2.3.6.1.9-.5.7-1.2 1-2 1-3.5-.5-7-4-7.5-7.5 0-.8.3-1.5 1-2z"
+fill="white"/>
+
+</svg>
+
+</div>
+
+
+<div class="socialInfo">
+
+<div class="socialName">
+WhatsApp
+</div>
+
+<div class="socialHandle">
+
+</div>
+
+</div>
+
+
+<div class="arrow">
+›
+</div>
+
+
+</a>
+
+
+<!-- TIKTOK -->
+
+<a
+class="social"
+href="https://www.tiktok.com/@azizos...0"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div class="socialIcon">
+
+<svg
+viewBox="0 0 24 24">
+
+<path
+d="M15 4c.4 2.1 1.7 3.5 4 3.8v3.1c-1.5 0-2.9-.5-4-1.3v6.1c0 3-2.4 5.3-5.4 5.3A5.4 5.4 0 0 1 4.2 16c0-3 2.4-5.4 5.4-5.4.4 0 .8 0 1.2.1v3.2a2.3 2.3 0 0 0-1.2-.3 2.3 2.3 0 1 0 2.3 2.3V4H15z"
+fill="white"/>
+
+</svg>
+
+</div>
+
+
+<div class="socialInfo">
+
+<div class="socialName">
+TikTok
+</div>
+
+<div class="socialHandle">
+
+</div>
+
+</div>
+
+
+<div class="arrow">
+›
+</div>
+
+
+</a>
+
+
+<!-- TELEGRAM -->
+
+<a
+class="social"
+href="https://t.me/IX5XIX6XI"
+target="_blank"
+rel="noopener noreferrer">
+
+
+<div class="socialIcon">
+
+<svg
+viewBox="0 0 24 24">
+
+<path
+d="M21.5 4.5 18.3 20c-.2 1.1-.8 1.3-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.8.4l.3-4.6 8.3-7.5c.4-.3-.1-.5-.6-.2L7 14.4l-4.4-1.4c-1-.3-1-1 .2-1.5L20 5.2c.9-.3 1.7-.2 1.5-.7z"
+fill="white"/>
+
+</svg>
+
+</div>
+
+
+<div class="socialInfo">
+
+<div class="socialName">
+Telegram
+</div>
+
+<div class="socialHandle">
+
+</div>
+
+</div>
+
+
+<div class="arrow">
+›
+</div>
+
+
+</a>
+
+
+</div>
+
+
+<!-- =====================================================
+     SHARE
+===================================================== -->
+
+<button
+class="share"
+onclick="shareSite()">
+
+🔗 مشاركة الصفحة
+
+</button>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<div class="footer">
+
+<div class="footerLine"></div>
+
+<span class="footerHeart">♡</span>
+
+<span>
+Made with ❤️ by Azizos
+</span>
+
+<span class="footerHeart">♡</span>
+
+<div class="footerLine right"></div>
+
+</div>
+
+
+</div>
+
+</main>
+
+
+<!-- TOAST -->
+
+<div id="toast">
+تم نسخ رابط الصفحة ❤️
+</div>
+
+
+<script>
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+setTimeout(function(){
+
+    document
+    .getElementById("intro")
+    .classList.add("hide");
+
+},1700);
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+const space =
+document.querySelector(".space");
+
+
+for(
+    let i = 0;
+    i < 140;
+    i++
+){
+
+    const star =
+    document.createElement("div");
+
+    star.className =
+    "star";
+
+
+    const size =
+    Math.random() * 2.5 + 1;
+
+
+    star.style.width =
+    size + "px";
+
+    star.style.height =
+    size + "px";
+
+
+    star.style.left =
+    Math.random() * 100 + "%";
+
+    star.style.top =
+    Math.random() * 100 + "%";
+
+
+    star.style.animationDelay =
+    Math.random() * 4 + "s";
+
+
+    star.style.animationDuration =
+    1.5 + Math.random() * 3 + "s";
+
+
+    space.appendChild(star);
+
+}
+
+
+/* =====================================================
+   SHARE
+===================================================== */
+
+async function shareSite(){
+
+    const data = {
+
+        title:
+        "Azizos ❤️",
+
+        text:
+        "كل حساباتي تلقاهم هنا 👇",
+
+        url:
+        window.location.href
+
+    };
+
+
+    try{
+
+        if(
+            navigator.share
+        ){
+
+            await navigator.share(data);
+
+        }
+
+        else{
+
+            await navigator.clipboard.writeText(
+                window.location.href
+            );
+
+            showToast();
+
+        }
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+    }
+
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+function showToast(){
+
+    const toast =
+    document.getElementById("toast");
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(function(){
+
+        toast.classList.remove("show");
+
+    },2200);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
